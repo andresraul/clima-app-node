@@ -1,3 +1,4 @@
+require('../config/config')
 const axios = require('axios');
 
 
@@ -11,7 +12,7 @@ const getLugarLatLng = async(lugar) => {
         baseURL: `https://devru-latitude-longitude-find-v1.p.rapidapi.com/latlon.php?location=${encodeURL}`,
         headers: {
             'x-rapidapi-host': 'devru-latitude-longitude-find-v1.p.rapidapi.com',
-            'x-rapidapi-key': '1f3265c0f9msh206dec29abc3aedp1d4ff4jsn2d53254046c2'
+            'x-rapidapi-key': process.env.RAPIDAPIKEY
         }
     });
 
